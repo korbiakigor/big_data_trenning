@@ -1,0 +1,28 @@
+0.Copy files to working directory;
+
+1.Execute script kafka-sampleTopic2.sh to create topic sampleTopic2 in kafka;
+
+2.In Apache Nifi import template Kafka_Producer_bitcoin_trans.xml and apply it;
+
+3.In Apache Nifi choose all processors and start;
+
+4.After some time stop all processors in Apache Nifi;
+
+5.Execute commands:
+
+sudo apt install python3-pip
+pip3 install kafka-python
+pip3 install pandas;
+
+6.Execute command: 
+
+chmod +x kafka_consumer.py
+
+7.Start Kafka consumer via command: 
+
+python3.6 kafka_consumer.py
+
+On the screen we will see top 10 price bitcoin transactions.
+Also file price_top10.csv will be created in working directory as a collection of top 10 transactions.
+
+We can repeat 3,4,7 steps to update our top 10 price transactions.
