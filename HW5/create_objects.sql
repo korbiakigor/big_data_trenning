@@ -14,9 +14,13 @@ DESCRIBE Flights;
 LOAD DATA INPATH '/hw4/flights.csv' OVERWRITE INTO TABLE Flights;
 
 
-
 CREATE TABLE Airlines(IATA_CODE string, AIRLINE string) row format delimited fields terminated by ',';
 
 DESCRIBE Airlines;
 
 LOAD DATA INPATH '/hw4/airlines.csv' OVERWRITE INTO TABLE Airlines;
+
+
+CREATE TABLE Top5_Departure_Delay(IATA_CODE string, AIRLINE string, DEPARTURE_DELAY_AVG double);
+
+DESCRIBE Top5_Departure_Delay;
