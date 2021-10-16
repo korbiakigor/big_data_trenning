@@ -34,7 +34,7 @@ df_debug = df1.join(airports, df1.DESTINATION_AIRPORT == airports.IATA_CODE, how
 
 
 # the most popular destination airport in each month
-result.write.csv('gs://ik-hw-b/HW6/destination_airports.csv')
+result.write.option('delimiter','\t').csv('gs://ik-hw-b/HW6/destination_airports.csv')
 
 # statistics per each of the airports for debugging
-df_debug.write.csv('gs://ik-hw-b/HW6/task1_debug.csv')
+df_debug.write.option('delimiter','\t').csv('gs://ik-hw-b/HW6/task1_debug.csv')
